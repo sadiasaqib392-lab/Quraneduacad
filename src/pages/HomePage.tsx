@@ -3,7 +3,6 @@ import {
   Sparkles,
   ArrowRight,
   ShieldCheck,
-  Clock,
   Users,
   Award,
   BookOpen,
@@ -105,41 +104,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenEnroll }) 
     { label: 'Countries', value: '24+' },
   ];
 
-  // Journey steps:
-  // Under "Contact Academy", add button with link to academy contact form & WhatsApp button
-  const admissionsSteps = [
-    {
-      num: '01',
-      title: 'Contact Academy & Book Trial',
-      desc: 'Submit our simple registration form or WhatsApp message. No credit card is needed. Select your preferred timezone and days.',
-      isFirstStep: true,
-    },
-    {
-      num: '02',
-      title: 'Academic Level Assessment',
-      desc: 'A certified scholar assesses the student’s current reading level, Makharij, and Tajweed basics.',
-    },
-    {
-      num: '03',
-      title: 'Custom Schedule & Tutor Match',
-      desc: 'Choose your preferred days, times, and male or female scholar based on preference.',
-    },
-    {
-      num: '04',
-      title: 'Begin 1-on-1 Interactive Classes',
-      desc: 'Connect via high-definition digital classroom with interactive Quran screen sharing.',
-    },
-    {
-      num: '05',
-      title: 'Weekly Feedback & WhatsApp Notes',
-      desc: 'Parents receive direct audio notes and weekly lesson summary from the teacher.',
-    },
-    {
-      num: '06',
-      title: 'Certification & Graduation',
-      desc: 'Upon completing each level, students receive official academy certificates of completion.',
-    },
-  ];
 
   return (
     <div className="w-full relative overflow-hidden text-slate-800">
@@ -395,7 +359,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenEnroll }) 
                 Our Quran & Arabic Courses
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-2 max-w-xl">
-                Structured programs including Noorani Qaida, Tajweed, Memorization, Translation, Basic Arabic, and Quranic Arabic.
+                Structured programs including Basic Arabic, Quranic Arabic, and Translation taught 1-on-1 by certified scholars.
               </p>
             </div>
 
@@ -411,7 +375,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenEnroll }) 
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-left">
-            {courses.slice(0, 6).map((course) => (
+            {courses.map((course) => (
               <div
                 key={course.id}
                 className="bg-[#FAF8F5] rounded-3xl border border-slate-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
@@ -438,16 +402,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenEnroll }) 
                     {course.shortDesc}
                   </p>
 
-                  <div className="pt-3 border-t border-slate-200/80 space-y-1.5 text-xs text-slate-500">
-                    <div className="flex items-center justify-between">
-                      <span>Duration:</span>
-                      <span className="font-semibold text-slate-700">{course.duration}</span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span>Classes:</span>
-                      <span className="font-semibold text-slate-700">{course.classesPerWeek}</span>
-                    </div>
-                  </div>
+
                 </div>
 
                 <div className="px-6 pb-6 pt-2 flex items-center gap-2">
@@ -473,77 +428,53 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenEnroll }) 
       </section>
 
       {/* 5. How Your Journey Begins
-          - Under Contact Academy, add button and attach academy contact form link
-          - Add WhatsApp button linked to +92 318 7779954
+          - Sirf do buttons:
+            1. Contact Academy (opens academy contact form)
+            2. WhatsApp (opens academy WhatsApp chat)
+          - Is ke ilawa jo b tha remove kr diya gaya hai
       */}
       <section className="relative py-20 bg-[#FAF8F5]">
         <IslamicPattern variant="light" opacity={0.035} patternType="star8" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-bold text-[#C5A059] uppercase tracking-widest font-serif">
-              Simple & Transparent Admissions
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-[#072C1E]">
-              How Your Journey Begins
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600">
-              Getting started takes less than 2 minutes. We match you with the ideal certified scholar and schedule your first trial class at your convenience.
-            </p>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-8 text-center space-y-6">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-900/5 text-[#0A3826] text-xs font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-[#C5A059]" />
+            <span>Simple & Seamless Enrollment</span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-left">
-            {admissionsSteps.map((step) => (
-              <div
-                key={step.num}
-                className="relative p-6 sm:p-7 rounded-3xl bg-white border border-slate-200/90 shadow-xs hover:shadow-md transition-shadow group flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl font-serif font-extrabold text-[#C5A059] group-hover:text-[#0A3826] transition-colors">
-                      {step.num}
-                    </span>
-                    <div className="w-8 h-8 rounded-full bg-emerald-50 text-[#0A3826] flex items-center justify-center font-bold text-xs">
-                      ✓
-                    </div>
-                  </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#072C1E]">
+            How Your Journey Begins
+          </h2>
 
-                  <h3 className="text-base font-serif font-bold text-[#072C1E] mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-xs text-slate-600 leading-relaxed mb-4">
-                    {step.desc}
-                  </p>
-                </div>
+          <p className="text-sm sm:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Getting started takes less than 2 minutes. Reach out to our academy or chat directly with us on WhatsApp to schedule your 3-Day Free Trial.
+          </p>
 
-                {/* Step 1 Actions: Contact Form Button & WhatsApp Button */}
-                {step.isFirstStep && (
-                  <div className="pt-3 border-t border-slate-100 flex flex-col sm:flex-row gap-2">
-                    <a
-                      href={`${window.location.origin}${window.location.pathname}#/contact`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-2 px-3 bg-[#0A3826] hover:bg-[#072C1E] text-white text-xs font-bold rounded-lg text-center transition-colors shadow-xs"
-                    >
-                      Contact Form
-                    </a>
-                    <a
-                      href={`${ACADEMY_CONFIG.whatsappUrl}?text=${encodeURIComponent(
-                        'As-salamu alaykum! I want to contact the academy and schedule my free trial.'
-                      )}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 py-2 px-3 bg-[#25D366] hover:bg-[#20BD5A] text-white text-xs font-bold rounded-lg text-center transition-colors shadow-xs inline-flex items-center justify-center gap-1.5"
-                    >
-                      <svg className="w-3.5 h-3.5 fill-white" viewBox="0 0 24 24">
-                        <path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.97.57 3.807 1.558 5.36L2 22l4.75-1.523A9.97 9.97 0 0 0 12.031 22C17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2zm5.72 14.34c-.24.67-1.39 1.28-1.92 1.36-.51.08-1.17.11-3.79-.95-2.24-.9-3.69-3.17-3.8-3.32-.11-.15-.92-1.22-.92-2.33 0-1.11.58-1.65.79-1.88.2-.23.45-.29.6-.29.15 0 .3 0 .43.01.14.01.32-.05.5.39.18.44.62 1.52.68 1.63.06.11.1.25.02.4-.07.15-.11.24-.22.37-.11.13-.23.29-.33.39-.11.11-.23.23-.1.45.13.22.58.96 1.25 1.56.86.77 1.59 1.01 1.81 1.12.22.11.35.1.48-.05.13-.15.56-.65.71-.88.15-.22.3-.18.5-.11.2.07 1.29.61 1.51.72.22.11.37.17.43.26.05.1.05.58-.19 1.25z" />
-                      </svg>
-                      <span>WhatsApp</span>
-                    </a>
-                  </div>
-                )}
-              </div>
-            ))}
+          {/* Sirf do buttons: Contact Academy and WhatsApp */}
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`${window.location.origin}${window.location.pathname}#/contact`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-[#0A3826] hover:bg-[#072C1E] text-white rounded-xl text-xs sm:text-sm font-bold uppercase tracking-wider transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap"
+            >
+              <span>Contact Academy</span>
+              <ArrowRight className="w-4 h-4 text-[#D4AF37]" />
+            </a>
+
+            <a
+              href={`${ACADEMY_CONFIG.whatsappUrl}?text=${encodeURIComponent(
+                'As-salamu alaykum! I would like to begin my Quran learning journey and schedule my 3-Day Free Trial.'
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-xl text-xs sm:text-sm font-bold transition-all shadow-md active:scale-95 whitespace-nowrap"
+            >
+              <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                <path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.97.57 3.807 1.558 5.36L2 22l4.75-1.523A9.97 9.97 0 0 0 12.031 22C17.566 22 22 17.566 22 12.031 22 6.496 17.566 2 12.031 2zm5.72 14.34c-.24.67-1.39 1.28-1.92 1.36-.51.08-1.17.11-3.79-.95-2.24-.9-3.69-3.17-3.8-3.32-.11-.15-.92-1.22-.92-2.33 0-1.11.58-1.65.79-1.88.2-.23.45-.29.6-.29.15 0 .3 0 .43.01.14.01.32-.05.5.39.18.44.62 1.52.68 1.63.06.11.1.25.02.4-.07.15-.11.24-.22.37-.11.13-.23.29-.33.39-.11.11-.23.23-.1.45.13.22.58.96 1.25 1.56.86.77 1.59 1.01 1.81 1.12.22.11.35.1.48-.05.13-.15.56-.65.71-.88.15-.22.3-.18.5-.11.2.07 1.29.61 1.51.72.22.11.37.17.43.26.05.1.05.58-.19 1.25z" />
+              </svg>
+              <span>WhatsApp: {ACADEMY_CONFIG.whatsapp}</span>
+            </a>
           </div>
         </div>
       </section>

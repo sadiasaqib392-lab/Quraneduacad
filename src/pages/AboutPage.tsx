@@ -54,8 +54,8 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnroll }
           </p>
 
           {/* Academy Statistics Banner: Students: 1000+, Teachers: 150+ */}
-          <div className="pt-8 max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs text-center">
+          <div className="pt-8 max-w-xl mx-auto grid grid-cols-2 gap-4 sm:gap-6">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xs text-center">
               <div className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0A3826]">
                 1000+
               </div>
@@ -63,28 +63,12 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate, onOpenEnroll }
                 Students
               </div>
             </div>
-            <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs text-center">
+            <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-xs text-center">
               <div className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0A3826]">
                 150+
               </div>
               <div className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-1">
                 Teachers
-              </div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs text-center">
-              <div className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0A3826]">
-                10+
-              </div>
-              <div className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-1">
-                Courses
-              </div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs text-center">
-              <div className="text-2xl sm:text-3xl font-serif font-extrabold text-[#0A3826]">
-                24+
-              </div>
-              <div className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-1">
-                Countries
               </div>
             </div>
           </div>

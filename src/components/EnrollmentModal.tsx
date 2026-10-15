@@ -13,7 +13,7 @@ interface EnrollmentModalProps {
 export const EnrollmentModal: React.FC<EnrollmentModalProps> = ({
   isOpen,
   onClose,
-  initialCourseId = 'quran-tajweed',
+  initialCourseId = 'basic-arabic',
 }) => {
   const [formData, setFormData] = useState({
     studentName: '',

@@ -24,7 +24,7 @@ export const AdmissionsPage: React.FC<AdmissionsPageProps> = ({ onNavigate }) =>
     country: '',
     whatsappNumber: '',
     email: '',
-    courseId: 'quran-tajweed',
+    courseId: 'basic-arabic',
     preferredTime: 'Evening (5:00 PM - 9:00 PM)',
     teacherPreference: 'Any Qualified Scholar',
     message: '',

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {
   Sparkles,
-  Clock,
-  Calendar,
   CheckCircle2,
   Users,
   Award,
@@ -91,16 +89,8 @@ export const CourseDetailPage: React.FC<CourseDetailPageProps> = ({
 
               <div className="pt-2 flex flex-wrap items-center gap-4 text-xs text-slate-600">
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-emerald-700" />
-                  <span><strong>Duration:</strong> {course.duration}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-emerald-700" />
-                  <span><strong>Classes:</strong> {course.classesPerWeek}</span>
-                </div>
-                <div className="flex items-center gap-1.5">
                   <Users className="w-4 h-4 text-emerald-700" />
-                  <span><strong>Class Type:</strong> 1-on-1 Private Lessons</span>
+                  <span><strong>Class Type:</strong> 1-on-1 Private Interactive Lessons</span>
                 </div>
               </div>
             </div>

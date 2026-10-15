@@ -22,9 +22,9 @@ import { LegalPage } from './pages/LegalPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageRoute>('home');
-  const [courseSlug, setCourseSlug] = useState('quran-tajweed');
+  const [courseSlug, setCourseSlug] = useState('basic-arabic');
   const [isEnrollModalOpen, setIsEnrollModalOpen] = useState(false);
-  const [enrollCourseId, setEnrollCourseId] = useState('quran-tajweed');
+  const [enrollCourseId, setEnrollCourseId] = useState('basic-arabic');
 
   // Multi-page hash routing
   useEffect(() => {

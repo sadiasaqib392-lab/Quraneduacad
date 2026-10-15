@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, BookOpen, Clock, Calendar, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Sparkles, BookOpen, CheckCircle2, ArrowRight } from 'lucide-react';
 import { IslamicPattern } from '../components/IslamicPattern';
 import { PageRoute } from '../types';
 import { courses } from '../data/academyData';
@@ -14,11 +14,8 @@ export const CoursesPage: React.FC<CoursesPageProps> = ({ onNavigate, onOpenEnro
 
   const categories = [
     'All',
-    'Foundation',
-    'Recitation',
-    'Memorization',
+    'Language',
     'Understanding',
-    'Islamic Studies',
   ];
 
   const filteredCourses =
@@ -39,11 +36,11 @@ export const CoursesPage: React.FC<CoursesPageProps> = ({ onNavigate, onOpenEnro
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-[#072C1E]">
-            Our Quran & Islamic Courses
+            Our Quran & Arabic Courses
           </h1>
 
           <p className="text-sm md:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            From the first letters of Noorani Qaida to full Quran memorization and Tafseer, discover accredited personalized courses taught 1-on-1 by certified scholars.
+            Discover accredited personalized 1-on-1 programs in Basic Arabic, Quranic Arabic, and Translation taught by certified scholars.
           </p>
 
           {/* Filter Categories */}
@@ -98,20 +95,7 @@ export const CoursesPage: React.FC<CoursesPageProps> = ({ onNavigate, onOpenEnro
                     {course.shortDesc}
                   </p>
 
-                  <div className="space-y-2 mb-5">
-                    <div className="flex items-center gap-2 text-xs text-slate-600">
-                      <Clock className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
-                      <span>
-                        <strong className="text-slate-800">Duration:</strong> {course.duration}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-slate-600">
-                      <Calendar className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
-                      <span>
-                        <strong className="text-slate-800">Schedule:</strong> {course.classesPerWeek}
-                      </span>
-                    </div>
-                  </div>
+
 
                   <div className="pt-4 border-t border-slate-200/80">
                     <h5 className="text-[11px] font-bold text-[#072C1E] uppercase tracking-wider mb-2">
